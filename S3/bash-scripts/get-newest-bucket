@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+echo "== get-newest-bucket"
+
+# output will have time and bucket name
+#aws s3 ls
+
+# output only bucket name
+aws s3api list-buckets | jq -r '.Buckets | sort_by(.CreationDate) | reverse | .[0] | .Name'
+
+# output only 0~4 bucket name
+#aws s3api list-buckets | jq -r '.Buckets | sort_by(.CreationDate) | reverse | .[0:5] | .[] | .Name'
+

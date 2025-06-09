@@ -1,0 +1,9 @@
+git add --all
+git commit -m "new"
+git push
+
+chmod u+x XXX
+
+
+git log --oneline # to check git verison
+
