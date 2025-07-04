@@ -1,3 +1,4 @@
+
 terraform {
   required_providers {
     aws = {
@@ -9,4 +10,12 @@ terraform {
 
 provider "aws" {
   # Configuration options
+  region = "ap-east-1"
 }
+
+# bucket 
+ resource "aws_s3_bucket" "my_bucket" {
+  bucket = "my-unique-bucket-name-yuri123"
+
+} 
+
